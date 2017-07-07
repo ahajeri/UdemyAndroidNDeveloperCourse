@@ -12,6 +12,10 @@ public class MainActivity extends AppCompatActivity {
         EditText inputValue = (EditText) findViewById(R.id.myInputValue);
         double value = Double.parseDouble(inputValue.getText().toString());
 
+        if(inputValue.getText().toString().isEmpty()){
+            Toast.makeText(MainActivity.this,"Please, Enter a number",Toast.LENGTH_LONG);
+            return;
+        }
 
         double result = value * 64.72;
 
